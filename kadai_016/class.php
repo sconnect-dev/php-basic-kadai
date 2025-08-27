@@ -13,8 +13,8 @@
        class Food {
 
        // プロパティを定義する
-       public $name;
-       public $price;
+       private $name;
+       private $price;
 
        // コンストラクタを定義する
        public function __construct(string $name, int $price) {
@@ -23,16 +23,16 @@
             }
 
        // プロパティの値を出力するメソッドを定義する
-       public function show_price(int $price){
-            $this->price= $price;
+       public function show_price(){
+            echo $this->price;
        }
        }
 
         class Animal {
            // プロパティを定義する
-           public $name;
-           public $height;
-           public $weight;
+           private $name;
+           private $height;
+           private $weight;
 
            // コンストラクタを定義する
            public function __construct(string $name, int $height, int $weight) {
@@ -42,8 +42,8 @@
             }
 
        // プロパティの値を出力するメソッドを定義する
-       public function show_height(int $height){
-            $this->height= $height;
+       public function show_height(){
+            echo $this->height;
        }
        }
        
@@ -52,8 +52,8 @@
        $animal = new Animal('猫',35,32);
 
        // それぞれのクラスに作成したメソッドにアクセスしメソッドを実行します
-       $food->show_price(500);
-       $animal->show_height(35);
+       $food->show_price();
+       $animal->show_height();
     
        // インスタンス$food,$animalの各プロパティの値を出力する
        print_r($food);
