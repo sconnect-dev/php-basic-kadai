@@ -18,7 +18,7 @@
 
        // コンストラクタを定義する
        public function __construct(string $name, int $price) {
-                $this->name = $name;
+                $this->name  = $name;
                 $this->price = $price;
             }
 
@@ -27,7 +27,6 @@
             $this->price= $price;
        }
        }
-
 
         class Animal {
            // プロパティを定義する
@@ -49,14 +48,18 @@
        }
        
        // インスタンス化する
-       $food   = new Food('侍',500);
+       $food   = new Food('ポテト',500);
        $animal = new Animal('猫',35,32);
 
-
+       // それぞれのクラスに作成したメソッドにアクセスしメソッドを実行します
+       $food->show_price(500);
+       $animal->show_height(35);
+    
        // インスタンス$food,$animalの各プロパティの値を出力する
        print_r($food);
        print_r('<br>');
        print_r($animal);
+
        ?>
    </p>
 </body>
